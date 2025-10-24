@@ -8,7 +8,7 @@
     @php
         $items = $page->items->paginate(12);
     @endphp
-<section class="py-15 md:pt-37 md:pb-25 bg-surface-raised">
+<section class="py-15 md:py-25 bg-surface-raised">
     <div class="container px-5 mx-auto">
         <h1 class="text-3xl md:text-4xl text-center mb-7.5">
             {{$heading}}

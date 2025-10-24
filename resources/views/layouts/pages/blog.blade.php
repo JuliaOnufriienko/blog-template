@@ -11,7 +11,7 @@
     'share_text: text',
     'socials: socials',
     'second_heading: text',
-    'view_all_button: link',
+    // 'view_all_button: link',
     'read_more_button_text: text',
     'comment_heading: text',
     'written_comments: array',
@@ -118,14 +118,11 @@
     </div>
 </section>
 <section class="pt-20 pb-70 container px-5 mx-auto">
-    <div class="flex justify-between items-center gap-4">
-        <div class="flex flex-col gap-y-2.5">
-            <h2 class="text-3xl">
-                {{$second_heading}}
-            </h2>
-            <div class="h-1 w-28 bg-main"></div>
-        </div>
-        <x-kit-link :options="$view_all_button" class="font-semibold text-nowrap text-right text-text-heading hover:opacity-60 animation"></x-kit-link>
+    <div class="flex flex-col gap-y-2.5">
+        <h2 class="text-3xl">
+            {{$second_heading}}
+        </h2>
+        <div class="h-1 w-28 bg-main"></div>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 justify-between gap-y-55 gap-x-6 mt-12">
         @foreach ($items as $item)

@@ -26,23 +26,6 @@
                             <x-kit-link :options="$item" class="text-text-quiet font-normal hover:text-text-heading transisiton-all"/>
                         @endif
                     @endforeach
-                    {{--
-            {
-                "href": "/",
-                "text": "Home",
-            {
-                "href": "/travel",
-                "text": "Travel",
-            },
-                "href": "/food",
-                "text": "Food",
-            },
-                "href": "/lifestyle",
-                "text": "Lifestyle",
-            },
-                "href": "/fashion",
-                "text": "Fashion",
-            } --}}
                 </ul>
             </nav>
             <form class="max-w-60 l:max-w-[19.5rem] w-full h-12 relative items-center bg-surface-raised">
@@ -52,7 +35,6 @@
                 </svg>
             </form>
         </div>
-
         <button
             @click="$dispatch('open-burger-menu')"
             class="size-8 text-text-heading md:hidden hover:text-text-quiet animation"
