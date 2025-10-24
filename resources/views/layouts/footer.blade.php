@@ -3,6 +3,7 @@
     'logo_image: image',
     'description: text',
     'category_heading: text',
+    'footermenu: menu',
     'social_heading: text',
     'socials: socials',
     'subscribe_heading: text',
@@ -31,11 +32,9 @@
                         {{$category_heading}}
                     </h2>
                     <ul class="flex flex-col gap-y-2.5">
-                        {{-- <template x-for="link in links">
-                            <li>
-                                <a x-text="link.text" :title="link.title" :href="link.href" class="hover:text-text-bold animation"></a>
-                            </li>
-                        </template> --}}
+                        @foreach ($footermenu as $item)
+                            <x-kit-link :options="$item" class="hover:text-text-bold animation"/>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="">
@@ -75,27 +74,9 @@
     </div>
 </footer>
 
-        {{-- links: [
-                "text": "Travel"
-            {
-                "text": "Food",
-            },
-                "text": "Lifestyle",
-            },
-                "text": "Fashion",
-            }
-        socials: [
-                "text": "Facebook",
-            },
-                "text": "Twitter",
-            },
-                "text": "Instagram",
-            },
-                "text": "Youtube", --}}
-
-  @vite(['resources/js/app.js'])
-  @stack('scripts')
-  <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+@vite(['resources/js/app.js'])
+@stack('scripts')
+<script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const emblaNodes = document.querySelectorAll('.embla')
