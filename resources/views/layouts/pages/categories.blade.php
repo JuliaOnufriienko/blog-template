@@ -1,14 +1,19 @@
 @name('categories')
 @schema([
     'heading: text',
-    'latest_categories:latest_categories',
+    'categories: array',
+    'categories.*.image: image',
+    'categories.*.link: link',
+    'categories.*.description: text',
+    'link_text: text',
+
 ])
 <section class="pt-15 sm:pt-25 pb-70 container px-5 mx-auto">
-    <h1 class="text-3xl sm:text-5xl lg:text-5xl leading-[1.2]">
+    <h1 class="text-3xl sm:text-5xl lg:text-5xl leading-[1.2] mb-10">
         {{ $heading }}
     </h1>
     <ul class="grid md:grid-cols-2 lg:grid-cols-3 justify-between gap-y-62 gap-x-6">
-        @foreach($latest_categories as $category)
+        @foreach($categories as $category)
             <li class="relative group ">
                 {{-- <div class="aspect-[1.2] overflow-hidden">
                     <x-kit-image :options=" $item->image " class="size-full object-cover group-hover:scale-105 animation"/>
@@ -25,15 +30,7 @@
                             {{ $category->title }}
                         </x-kit-link>
                     </h3>
-                    <div class="text-text-quiet max-md:text-sm flex gap-x-2 mt-2.5">
-                        {{-- <time datetime="{{ $item->updated_at->format('Y.m.d') }}">
-                            {{ $item->updated_at->format('m.d.Y') }}
-                        </time> --}}
-                        <span>&#8226;</span>
-                        <p>
-                            {{-- {{$item['layout_settings']['time_to_read']}} --}}
-                        </p>
-                    </div>
+
                     {{-- <x-kit-link :options="$item->url" class="flex items-center mt-3 gap-x-2 text-text-heading group hover:text-main animation">
                         {{$read_text_button}}
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 group-hover:translate-x-1 animation">
