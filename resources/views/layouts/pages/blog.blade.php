@@ -32,7 +32,6 @@
 
 <section class="relative z-30 max-h-250 flex">
     <x-kit-image :options="$background_image" class="w-full object-cover"/>
-
     <div class="absolute w-9/10 left-1/2 -translate-x-1/2 sm:w-full -bottom-34">
         <div class="container  drop-shadow-lg h-full mx-auto bg-surface-default p-4 sm:p-10">
             <div class="flex items-center gap-x-2">
