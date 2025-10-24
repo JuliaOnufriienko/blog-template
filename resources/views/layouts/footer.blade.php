@@ -55,7 +55,7 @@
                     {{$subscribe_heading}}
                 </h2>
                 <form action="" class="flex flex-col xs:flex-row gap-2.25">
-                    <input placeholder="Email" type="text" class="px-5 h-12.5 bg-surface-default/5">
+                    <input placeholder="Email" type="text" class="px-5 h-12.5 bg-surface-default/5" inputmode="email">
                     <button aria-label="{{$subscribe_button}}" type="submit"
                     class="h-12.5 px-5.5 leading-1.5 font-medium btn center animation">
                         {{$subscribe_button}}
@@ -80,7 +80,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const emblaNodes = document.querySelectorAll('.embla')
-
+        const OPTIONS = { loop: true }
         emblaNodes.forEach(emblaNode => {
         const viewportNode = emblaNode.querySelector('.embla__viewport')
         const prevBtn = emblaNode.querySelector('.embla__button--prev')
@@ -108,5 +108,4 @@
             .on('select', togglePrevNextBtnsState)
         })
     })
-
 </script>

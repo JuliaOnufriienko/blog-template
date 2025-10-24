@@ -11,7 +11,6 @@
     'share_text: text',
     'socials: socials',
     'second_heading: text',
-    // 'view_all_button: link',
     'read_more_button_text: text',
     'comment_heading: text',
     'written_comments: array',
