@@ -148,7 +148,7 @@
                             </time>
                             <span>&#8226;</span>
                             <p>
-                                {{$item['layout_settings']['time_to_read']}}
+                                {{-- {{$item['layout_settings']['time_to_read']}} --}}
                             </p>
                         </div>
                         <x-kit-link :options="$item->url" class="flex items-center mt-3 md:mt-5 gap-x-2 group text-text-heading hover:text-main animation">

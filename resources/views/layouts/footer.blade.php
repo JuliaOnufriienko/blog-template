@@ -14,11 +14,11 @@
         <div class="flex flex-col xl:flex-row items-start gap-y-7 gap-x-3 justify-between pb-16.75 border-b border-border">
             <div class="flex-col flex gap-y-3">
                 @if (rtrim($host['url'], '/') === rtrim(url()->current(), '/'))
-                    <span class="size-30 block center">
+                    <span class="size-30 block ">
                         <x-kit-image :options="$logo_image" class="w-full object-contain"/>
                     </span>
                 @else
-                    <x-kit-link :options="$host" class="size-20 block center group">
+                    <x-kit-link :options="$host" class="size-20 block  group">
                         <x-kit-image :options="$logo_image" class="w-full object-contain group-hover:scale-105 transition-all"/>
                     </x-kit-link>
                 @endif
