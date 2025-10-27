@@ -1,4 +1,4 @@
-@name('grid_posts')
+@name('two_posts')
 @schema([
     'heading: text',
     'featured_posts: popular_items',
@@ -26,13 +26,13 @@
                             <span class="w-6 h-0.5 bg-main"></span>
                             <span class="text-text-heading" x-text="card.type"></span>
                         </div>
-                        <h3 x-text="card.heading" class="line-clamp-3 text-2xl xs:text-[28px] leading-[1.2]"></h3>
-                        <div class="text-text-quiet flex gap-x-2 mt-2.5">
-                            <time x-text="card.date" :datetime="2021-03-25">March 25, 2021</time>
+                        <h3 class="line-clamp-3 text-2xl xs:text-[28px] leading-[1.2]"></h3>
+                        <div class="max-md:text-sm text-text-quiet flex gap-x-2 mt-2.5">
+                            <time :datetime="2021-03-25">March 25, 2021</time>
                             <span>&#8226;</span>
-                            <p x-text="`${card.time} min read`">
-
-                            </p>
+                            {{-- <p>
+                                {{$post['layout_settings']['time_to_read']}}
+                            </p> --}}
                         </div>
                         <a :href="card.href" title="Arcticle" class="flex items-center mt-5 gap-x-2 text-text-heading group-hover:text-main animation">
                             Read Arcticle

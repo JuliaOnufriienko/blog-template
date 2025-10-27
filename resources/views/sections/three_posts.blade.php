@@ -27,7 +27,7 @@
                     </x-kit-link>
                 </h3>
                 <div class="max-md:text-sm text-text-quiet flex gap-x-2 mt-2.5">
-                    <time x-text="card.date" datetime="{{ $post->updated_at->format('Y.m.d') }}">
+                    <time datetime="{{ $post->updated_at->format('Y.m.d') }}">
                         {{ $post->updated_at->format('m.d.Y') }}
                     </time>
                     <span>&#8226;</span>

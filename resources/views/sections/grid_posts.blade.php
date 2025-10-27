@@ -4,11 +4,12 @@
     'featured_posts: popular_items',
     'text_button: text'
 ])
-<section class="bg-surface-raised pt-25 pb-80">
+<section class="bg-surface-raised pt-15 md:pt-25 pb-60 md:pb-75">
     <div class="container mx-auto px-5">
         <div class="flex flex-col gap-y-2.5">
-            <h2 class="text-4xl">
-                Latest Post
+            <h2 class="text-3xl md:text-4xl">
+                {{-- Latest Post --}}
+                {{$heading}}
             </h2>
             <div class="h-1 w-28 bg-main"></div>
         </div>
@@ -25,13 +26,13 @@
                                 {{$post->parent->name}}
                             </span>
                         </div>
-                        <h3 x-text="card.heading" class="line-clamp-3 text-2xl lg:text-3xl leading-[1.2] hover:text-main animation">
+                        <h3 class="line-clamp-3 text-2xl lg:text-3xl leading-[1.2] hover:text-main animation">
                             <x-kit-link :options="$post->url" class="">
                                 {{ $post->title }}
                             </x-kit-link>
                         </h3>
                         <div class="max-md:text-sm text-text-quiet flex gap-x-2 mt-2.5">
-                            <time x-text="card.date" datetime="{{ $post->updated_at->format('Y.m.d') }}">
+                            <time datetime="{{ $post->updated_at->format('Y.m.d') }}">
                                 {{ $post->updated_at->format('m.d.Y') }}
                             </time>
                             <span>&#8226;</span>
